@@ -29,13 +29,13 @@ public class Main {
 
             List<String> uriList = Utils.discoverModelFromPath(config.getRootPath(), config.getModelExtension());
 
-            Variable thresholdVariable = new Variable("threshold", eclConfig.getEclParams().getThreshold(),
+            Variable thresholdVariable = new Variable("threshold", 0.5,
                     EolCollectionType.Collection);
             Variable componentDistanceWeigth = new Variable("componentDistanceWeigth",
-                    eclConfig.getEclParams().getComponentDistanceWeigth(),
+                    0.5,
                     EolCollectionType.Collection);
             Variable connectorDistanceWeigth = new Variable("connectorDistanceWeigth",
-                    eclConfig.getEclParams().getConnectorDistanceWeigth(),
+                    0.5,
                     EolCollectionType.Collection);
 
             Double[][] matrix = new Double[uriList.size()][uriList.size()];
