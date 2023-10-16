@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.LogManager;
@@ -18,6 +19,41 @@ import com.opencsv.CSVWriter;
 public class Utils {
 
     private final static Logger logger = LogManager.getLogger(Utils.class);
+
+    /**
+     * 
+     * @return
+     * @throws Exception
+     */
+    public static List<String> discoverModelFromPath(String stringPath, List<String> modelExtension) throws Exception {
+        // Check if path is null
+        if (stringPath == null) {
+            throw new Exception("There is not root path for reading the XMI models");
+        }
+        File filePath = Paths.get(stringPath).toFile();
+
+        if (!filePath.exists()) {
+            throw new Exception("The path to get the xmi converted files does not exist: " + filePath);
+        }
+
+        if (!filePath.isDirectory()) {
+            throw new Exception("The file to process the xmi converted models must be a directory");
+        }
+
+        List<String> uris = new ArrayList<>();
+
+        Files.walk(Path.of(stringPath)).sorted().map(Path::toFile).forEach(
+                (File file) -> {
+                    if (file.isFile()) {
+                        String uriModel = file.getPath();
+                        String ext = SearchFileTraversal.getExtension(uriModel);
+                        if (modelExtension.contains(ext))
+                            uris.add(file.getPath());
+                    }
+                });
+
+        return uris;
+    }
 
     /**
      * Method that allow to create a EmfModel

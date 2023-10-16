@@ -4,6 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,8 +22,7 @@ import org.apache.commons.io.FileUtils;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
-@Setter
-@Getter
+@Data
 public class Config {
     private final static String configPath = "/config.json";
     private String rootPath;
@@ -32,6 +32,7 @@ public class Config {
     private List<String> extensionsForSearching;
     private List<String> externalResources;
     private List<String> avoidFileNames;
+    private List<String> modelExtension;
 
     private List<Map<String, Object>> conversionLogs;
     private List<String> filesFound;
@@ -64,6 +65,8 @@ public class Config {
         // set cache for polling
         this.timeCacheForPollingFromExternalResources = config
                 .getInt("timeCacheForPollingFromExternalResources");
+                // set file names to avoid
+        this.modelExtension= this.fromJSONArrayToArrayList(config.getJSONArray("modelExtension"));
 
         // set archives for searching
         this.archivesForSearching = this.fromJSONArrayToArrayList(config.getJSONArray("archivesForSearching"));

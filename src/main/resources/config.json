@@ -11,5 +11,6 @@
   "timeCacheForPollingFromExternalResources": 300,
   "ecoreRequiredFilesFolder": "ecore",
   "rootPath": "models",
-  "externalResources": []
+  "externalResources": [],
+  "modelExtension": ["xml", "xmi", "ecore", "aaxl2"]
 }
