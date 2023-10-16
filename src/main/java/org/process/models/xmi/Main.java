@@ -11,8 +11,6 @@ import org.config.Config;
 import org.config.EclConfig;
 import org.eclipse.epsilon.ecl.EclModule;
 import org.eclipse.epsilon.emc.emf.EmfModel;
-import org.eclipse.epsilon.eol.execute.context.Variable;
-import org.eclipse.epsilon.eol.types.EolCollectionType;
 import org.utils.Utils;
 
 public class Main {
@@ -29,15 +27,6 @@ public class Main {
 
             List<String> uriList = Utils.discoverModelFromPath(config.getRootPath(), config.getModelExtension());
 
-            Variable thresholdVariable = new Variable("threshold", 0.5,
-                    EolCollectionType.Collection);
-            Variable componentDistanceWeigth = new Variable("componentDistanceWeigth",
-                    0.5,
-                    EolCollectionType.Collection);
-            Variable connectorDistanceWeigth = new Variable("connectorDistanceWeigth",
-                    0.5,
-                    EolCollectionType.Collection);
-
             Double[][] matrix = new Double[uriList.size()][uriList.size()];
             // Same as eol runner
             Path eclFileFolderPath = Paths.get(eclConfig.getEclScriptsFolderPath()).toAbsolutePath();
@@ -45,9 +34,6 @@ public class Main {
             String metaModelPath = Paths.get("ecore", "aadl2_inst.ecore").toAbsolutePath().toString();
 
             for (int i = 0; i < uriList.size(); i++) {
-                logger.info("STEP: " + i + " OF " + uriList.size());
-                // We need to create a model that satisfy addModel method, for this reason we
-                // use te EmfModel that implements even IModel interface
                 EmfModel firstModel = Utils.createEmfModel("FirstModel", uriList.get(i), metaModelPath, true, false);
 
                 for (int j = 0; j < uriList.size(); j++) {
@@ -61,11 +47,6 @@ public class Main {
                                 false);
 
                         eclModule.parse(new File(eclFilePath));
-
-                        // pass data that can be used in ecl script
-                        // Maybe thresholds or others
-                        eclModule.getContext().getFrameStack().putGlobal(thresholdVariable, componentDistanceWeigth,
-                                connectorDistanceWeigth);
 
                         // Add models to ecl module
                         eclModule.getContext().getModelRepository().addModel(firstModel);
