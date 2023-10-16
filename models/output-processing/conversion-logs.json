@@ -1,0 +1,98 @@
+[
+  {
+    "isParsingSucceeded": false,
+    "extension": "aadl",
+    "pathAADLFile": "file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/CASEConsts.aadl",
+    "pathXMLFile": "D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\output-processing\\xmi\\",
+    "isSavedTheModel": false,
+    "docFiles": ["D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\raw-models\\Phase-2-UAV-Experimental-Platform\\CASE\\README.md"],
+    "errors": ["This model: file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/CASEConsts.aadl is not an AadlPackage"]
+  },
+  {
+    "isParsingSucceeded": true,
+    "modelName": "MC",
+    "extension": "aadl",
+    "pathAADLFile": "file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl",
+    "pathXMLFile": "D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\output-processing\\xmi\\Phase-2-UAV-Experimental-Platform_MC_MissionComputer_Impl_1.aaxl2",
+    "isSavedTheModel": true,
+    "docFiles": ["D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\raw-models\\Phase-2-UAV-Experimental-Platform\\CASE\\README.md"],
+    "errors": [
+      "ERROR:Couldn't resolve reference to property definition 'Actual_Processor_Binding'. Property set name may be missing. (file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl...",
+      "ERROR:Couldn't resolve reference to property definition 'Actual_Memory_Binding'. Property set name may be missing. (file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aadl li...",
+      "ERROR:Couldn't resolve reference to property definition 'Actual_Connection_Binding'. Property set name may be missing. (file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/MC.aad..."
+    ]
+  },
+  {
+    "isParsingSucceeded": true,
+    "modelName": "UAS",
+    "extension": "aadl",
+    "pathAADLFile": "file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aadl",
+    "pathXMLFile": "D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\output-processing\\xmi\\Phase-2-UAV-Experimental-Platform_UAS_UAS_Impl_1.aaxl2",
+    "isSavedTheModel": true,
+    "docFiles": ["D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\raw-models\\Phase-2-UAV-Experimental-Platform\\CASE\\README.md"],
+    "errors": ["ERROR:Couldn't resolve reference to property definition 'Actual_Connection_Binding'. Property set name may be missing. (file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/UAS/UAS.aa..."]
+  },
+  {
+    "isParsingSucceeded": false,
+    "extension": "aadl",
+    "pathAADLFile": "file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/CASE/CASE_Properties.aadl",
+    "pathXMLFile": "D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\output-processing\\xmi\\",
+    "isSavedTheModel": false,
+    "docFiles": ["D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\raw-models\\Phase-2-UAV-Experimental-Platform\\CASE\\README.md"],
+    "errors": ["This model: file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/CASE/CASE_Properties.aadl is not an AadlPackage"]
+  },
+  {
+    "isParsingSucceeded": true,
+    "modelName": "UAV",
+    "extension": "aadl",
+    "pathAADLFile": "file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aadl",
+    "pathXMLFile": "D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\output-processing\\xmi\\Phase-2-UAV-Experimental-Platform_UAV_UAV_Impl_1.aaxl2",
+    "isSavedTheModel": true,
+    "docFiles": ["D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\raw-models\\Phase-2-UAV-Experimental-Platform\\CASE\\README.md"],
+    "errors": ["ERROR:Couldn't resolve reference to property definition 'Actual_Connection_Binding'. Property set name may be missing. (file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/UAV.aa..."]
+  },
+  {
+    "isParsingSucceeded": true,
+    "modelName": "FC",
+    "extension": "aadl",
+    "pathAADLFile": "file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/UAV/FC.aadl",
+    "pathXMLFile": "D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\output-processing\\xmi\\Phase-2-UAV-Experimental-Platform_FC_FlightController_Impl_1.aaxl2",
+    "isSavedTheModel": true,
+    "docFiles": ["D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\raw-models\\Phase-2-UAV-Experimental-Platform\\CASE\\README.md"],
+    "errors": []
+  },
+  {
+    "isParsingSucceeded": true,
+    "modelName": "GS",
+    "extension": "aadl",
+    "pathAADLFile": "file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl",
+    "pathXMLFile": "D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\output-processing\\xmi\\Phase-2-UAV-Experimental-Platform_GS_GroundStation_Impl_1.aaxl2",
+    "isSavedTheModel": true,
+    "docFiles": ["D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\raw-models\\Phase-2-UAV-Experimental-Platform\\CASE\\README.md"],
+    "errors": [
+      "ERROR:Couldn't resolve reference to property definition 'Actual_Processor_Binding'. Property set name may be missing. (file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl ...",
+      "ERROR:Couldn't resolve reference to property definition 'Actual_Memory_Binding'. Property set name may be missing. (file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl lin...",
+      "ERROR:Couldn't resolve reference to property definition 'Actual_Connection_Binding'. Property set name may be missing. (file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/Phase-2-UAV-Experimental-Platform/GS/GS.aadl..."
+    ]
+  },
+  {
+    "isParsingSucceeded": true,
+    "modelName": "syst",
+    "extension": "aadl",
+    "pathAADLFile": "file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/SecuritySystem/syst.aadl",
+    "pathXMLFile": "D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\output-processing\\xmi\\SecuritySystem_syst_SecuritySystem_with_devices_1.aaxl2",
+    "isSavedTheModel": true,
+    "docFiles": [],
+    "errors": []
+  },
+  {
+    "isParsingSucceeded": true,
+    "modelName": "ClientServer",
+    "extension": "aadl",
+    "pathAADLFile": "file:/D:/mauro/Universita/Magistrale/Tesi/architectural-model-discoverer/models/raw-models/SimpleWebServer/ClientServer.aadl",
+    "pathXMLFile": "D:\\mauro\\Universita\\Magistrale\\Tesi\\architectural-model-discoverer\\models\\output-processing\\xmi\\SimpleWebServer_ClientServer_ClientServer_impl_1.aaxl2",
+    "isSavedTheModel": true,
+    "docFiles": [],
+    "errors": []
+  }
+]

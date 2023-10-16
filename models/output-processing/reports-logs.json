@@ -1,0 +1,14 @@
+{
+  "general": {
+    "totalFilesDiscovered": 9,
+    "totalFilesWithErrors": 2,
+    "totalFilesConverted": 7,
+    "totalFilesSuccessfullyParsed": 7
+  },
+  "aadl": {
+    "filesConverted": 7,
+    "totalFiles": 9,
+    "filesSuccessfullyParsed": 7,
+    "filesWithErrors": 2
+  }
+}
