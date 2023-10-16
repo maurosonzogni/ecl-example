@@ -128,9 +128,9 @@ public class EclRunner {
 
         }
 
-        Utils.writeToCSV(csv, eclConfig.getCsvFileFolderPath(), eclConfig.getCsvFileName());
+        //Utils.writeToCSV(csv, eclConfig.getCsvFileFolderPath(), eclConfig.getCsvFileName());
 
-        // Utils.print2dArray(matrix);
+        Utils.print2dArray(matrix);
 
     }
 
