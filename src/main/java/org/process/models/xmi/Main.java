@@ -27,42 +27,34 @@ public class Main {
 
             List<String> uriList = Utils.discoverModelFromPath(config.getRootPath(), config.getModelExtension());
 
-            Double[][] matrix = new Double[uriList.size()][uriList.size()];
+            Double[][] matrix = new Double[1][1];
             // Same as eol runner
             Path eclFileFolderPath = Paths.get(eclConfig.getEclScriptsFolderPath()).toAbsolutePath();
+
             String eclFilePath = eclFileFolderPath.resolve(eclConfig.getEclScriptName()).toString();
+
             String metaModelPath = Paths.get("ecore", "aadl2_inst.ecore").toAbsolutePath().toString();
 
-            for (int i = 0; i < uriList.size(); i++) {
-                EmfModel firstModel = Utils.createEmfModel("FirstModel", uriList.get(i), metaModelPath, true, false);
+            EmfModel firstModel = Utils.createEmfModel("FirstModel", uriList.get(0), metaModelPath, true, false);
 
-                for (int j = 0; j < uriList.size(); j++) {
+            EclModule eclModule = new EclModule();
 
-                    EclModule eclModule = new EclModule();
-                    try {
+            EmfModel secondModel = Utils.createEmfModel("SecondModel", uriList.get(1), metaModelPath, true,
+                    false);
 
-                        eclModule.parse(new File(eclFilePath));
+            eclModule.parse(new File(eclFilePath));
 
-                        EmfModel secondModel = Utils.createEmfModel("SecondModel", uriList.get(j), metaModelPath, true,
-                                false);
+            // Add models to ecl module
+            eclModule.getContext().getModelRepository().addModel(firstModel);
+            eclModule.getContext().getModelRepository().addModel(secondModel);
+            // execute ecl module
 
-                        eclModule.parse(new File(eclFilePath));
-
-                        // Add models to ecl module
-                        eclModule.getContext().getModelRepository().addModel(firstModel);
-                        eclModule.getContext().getModelRepository().addModel(secondModel);
-                        // execute ecl module
-                        eclModule.execute();
-
-                    } catch (Exception e) {
-                        logger.error("Error performing ECL script: " + e.getMessage());
-                    }
-                    // Only 3 digists after 0
-                    matrix[i][j] = Math.round(
-                            (Double) eclModule.getContext().getFrameStack().get("editDistance").getValue() * 1000.0)
-                            / 1000.0;
-                }
-            }
+            eclModule.execute();
+                
+            // Only 3 digists after 0
+            matrix[0][0] = Math.round(
+                    (Double) eclModule.getContext().getFrameStack().get("editDistance").getValue() * 1000.0)
+                    / 1000.0;
 
             Utils.print2dArray(matrix);
 
