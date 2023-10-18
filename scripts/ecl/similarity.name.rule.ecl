@@ -9,11 +9,9 @@ pre{
 rule CompareByComponentName
     match componentsFirstModel: FirstModel!SystemInstance
     with componentsSecondModel: SecondModel!SystemInstance {
-
         do {
             editDistance=0.5.asDouble().println("Edit distance changed to: ");
-            matchInfo.put("a", 10);
-
+            //matchInfo.put("a", 10);
         }
 
 }
