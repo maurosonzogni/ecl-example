@@ -1,16 +1,18 @@
-pre { 
+pre{
     var editDistance = 1.asDouble();
+    FirstModel!ComponentInstance.all().println();
+    SecondModel!ComponentInstance.all().println();
+    
 }
 
+@greedy
 rule CompareByComponentName
-    match componentsFirstModel: FirstModel!ComponentInstance
-    with componentsSecondModel: SecondModel!ComponentInstance {
-        // check if category are equals, that's avoid to compare SW components with HW components
-        guard : true//componentsFirstModel.category.toString().equalsIgnoreCase(componentsSecondModel.category.toString())  
-        // 0.0 if are equals
-        compare: true//levenshtein.distance(clearName(componentsFirstModel.name),clearName(componentsSecondModel.name)).asDouble() < threshold.asDouble()
+    match componentsFirstModel: FirstModel!SystemInstance
+    with componentsSecondModel: SecondModel!SystemInstance {
+
         do {
-            editDistance=0.5.asDouble();
+            editDistance=0.5.asDouble().println("Edit distance changed to: ");
+            matchInfo.put("a", 10);
 
         }
 

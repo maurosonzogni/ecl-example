@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.config.Config;
 import org.config.EclConfig;
 import org.eclipse.epsilon.ecl.EclModule;
+import org.eclipse.epsilon.ecl.trace.MatchTrace;
 import org.eclipse.epsilon.emc.emf.EmfModel;
 import org.utils.Utils;
 
@@ -49,14 +50,12 @@ public class Main {
             eclModule.getContext().getModelRepository().addModel(secondModel);
             // execute ecl module
 
-            eclModule.execute();
-                
-            // Only 3 digists after 0
-            matrix[0][0] = Math.round(
-                    (Double) eclModule.getContext().getFrameStack().get("editDistance").getValue() * 1000.0)
-                    / 1000.0;
+            MatchTrace mt = eclModule.execute();
+        
 
-            Utils.print2dArray(matrix);
+
+            //Utils.print2dArray(matrix);
+            eclModule.getContext().dispose();
 
         } catch (Exception e) {
             logger.info("Main@main -> ERROR: " + e.getMessage());
